@@ -1,13 +1,13 @@
 import React from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import indexRoutes from './routes';
+import adminRoutes from '../../routes/adminRoutes';
 
-function App() {
+function Main() {
   return (
-    <Router >
+    <Router>
       <Switch>
         {
-          indexRoutes.map((prop, key) => {
+          adminRoutes.map((prop, key) => {
             return (
               <Route path={prop.path} component={prop.component} key={key} />
             )
@@ -18,4 +18,4 @@ function App() {
   );
 }
 
-export default App;
+export default Main;
